@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Slider</title>
+    <style>
+        .slideshow-container {
+            max-width: 1080px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="https://images.pexels.com/photos/8670490/pexels-photo-8670490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://images.pexels.com/photos/3604912/pexels-photo-3604912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://images.pexels.com/photos/591657/alps-mountain-nature-flora-591657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
+
+        </div>
+    </div>
+
+
+    <script>
+
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+</body>
+
+</html>
